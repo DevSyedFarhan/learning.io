@@ -11,14 +11,13 @@ html, body{
     width: 100%;
     height: 100%;
 }
-#main{
-    overflow: hidden;
-}
+
 #page1{
-    padding: 3vw;
+    padding: 2vw;
     min-height: 100vh;
     width: 100%;
     position: relative;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.295);
 }
 nav{
     width: 100%;
@@ -29,7 +28,7 @@ nav{
     position: sticky;
     z-index: 90;
     border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.781);
+    background-color: rgba(255, 255, 255, 0.904);
     backdrop-filter: blur(10px); 
     top: 0;
     padding: 1vw;
@@ -45,6 +44,48 @@ nav h1{
 nav img{
     width: 2.5vw;
 }
+
+nav h4{
+    font-size: 1vw;
+    padding: 1vw 2vw;
+    border: 1px solid rgb(75,156,236);
+    border-radius: 50px;
+    position: relative;
+    transition: all ease 0.4s;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+nav h4 a{
+    text-decoration: none;
+    color: rgb(7, 127, 248);
+    z-index: 9;
+    position: relative;
+    font-weight: 700;
+}
+
+nav h4::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(7, 127, 248);
+    left: 0;
+    bottom: -100%;
+    border-radius: 50%;
+    transition: all ease 0.4s;
+}
+
+nav h4:hover::after{
+    bottom: 0;
+    border-radius: 0;
+}
+
+nav h4:hover a{
+    color: #faf9f9;
+}
+
+
 #page2{
     position: relative;
     min-height: 100vh;
@@ -53,14 +94,9 @@ nav img{
 
 #links{
     display: flex;
-    gap: 2vw;
+    gap: 1vw;
 }
 
-#links a{
-    text-decoration: none;
-    color: rgb(75,156,236);
-    font-weight: 600;
-}
 
 #center{
     height: 80vh;
@@ -105,11 +141,20 @@ nav img{
 
 #heading{
     width: 100%;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     display: flex;
 }
 
+#heading>p{
+    font-size: 1.5vw;
+    width: 70%;
+    text-align: center;
+    padding: 2vw 0vw;
+}
 #heading>h2{
+    padding-top: 5vw;
     font-size: 4vw;
     color: rgb(75,156,236);
 }
@@ -117,7 +162,7 @@ nav img{
 #heading>h2 span{
     font-family: "Dancing Script", serif;
     font-size: 4vw;
-    color: pink;
+    color: yellow;
 }
 
 #alphabets{
@@ -137,7 +182,7 @@ nav img{
     top: 0;
     z-index: 100;
     border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.781);
+    background-color: rgba(255, 255, 255, 0.884);
     backdrop-filter: blur(10px); 
     padding: 1vw;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
@@ -148,23 +193,39 @@ nav img{
 }
 .cards{
     width: 300px;
+    user-select: none;
     height: 35vh;
     display: flex;
     align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 2vw;
     border-radius: 10px;
-    box-shadow: 0px 4px 10px rgb(0, 0, 0, .1);
-    background-color: white;
+    box-shadow: 0px 4px 10px rgb(0, 0, 0, .3);
+    background-color: rgb(7, 127, 248);
     transition: all 0.5s ease;
     cursor: pointer;
 }
 
+.cards>h2{
+    padding-top: 1vw;
+    color: white;
+}
+
+.cards>h1{
+    text-transform: uppercase;
+    color: yellow;
+}
+
 .cards:hover{
     scale: 1.1;
-    background: linear-gradient(to right, rgb(255, 255, 255), rgb(165, 211, 255), rgb(7, 127, 248) );
+    background: linear-gradient(to bottom, rgb(159, 225, 255), rgb(165, 211, 255), rgb(7, 127, 248) );
 }
 .cards img{
-    width: 50%;
+    padding: 2vw 5vw;
+    width: 80%;
+    background-color: white;
+    border-radius: 10px;
 }
 
 #top{
@@ -178,7 +239,7 @@ nav img{
 }
 
 #top a{
-    color: rgb(7, 127, 248);
+    color: rgb(105, 180, 255);
     text-decoration: none;
     
 }
@@ -191,4 +252,31 @@ nav img{
     position: relative;
     height: 100vh;
     width: 100vw;
+    background-color: rgb(7, 127, 248);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#page3>h1{
+    font-size: 23vw;
+    color: white;
+}
+
+#page3>h2{
+    color: yellow;
+    font-size: 3vw;
+}
+
+#social{
+    display: flex;
+    align-items: center;
+    color: white;
+    gap: 2vw;
+}
+#social a{
+    text-decoration: none;
+    color: yellow;
+    font-size: 5vw;
 }
