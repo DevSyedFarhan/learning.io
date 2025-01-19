@@ -222,8 +222,8 @@ nav h4:hover a{
     background: linear-gradient(to bottom, rgb(159, 225, 255), rgb(165, 211, 255), rgb(7, 127, 248) );
 }
 .cards img{
-    padding: 2vw 5vw;
-    width: 80%;
+    padding: 2vw 6vw;
+    width: 90%;
     background-color: white;
     border-radius: 10px;
 }
